@@ -9,7 +9,7 @@
   import Simon from "./Simon.svelte";
   import choose from "../scripts/choose";
   import { aWords, dNouns, dVerbs, hWords } from "../resources/titles";
-import Stonks from "./Stonks.svelte";
+  import Stonks from "./Stonks.svelte";
 
   let score = 0;
   let failed = false;
@@ -50,6 +50,11 @@ import Stonks from "./Stonks.svelte";
     flex-wrap: wrap;
     gap: 1px;
   }
+  footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 0.8em;
+  }
 </style>
 
 <svelte:head>
@@ -63,3 +68,6 @@ import Stonks from "./Stonks.svelte";
     {/if}
   {/each}
 </main>
+<footer>
+  <p>made by <a href="https://www.twitter.com/woobyrubes">@woobyrubes</a></p>
+</footer>
