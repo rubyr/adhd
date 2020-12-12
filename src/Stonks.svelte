@@ -9,7 +9,7 @@
 
   let num = 0;
   let hiddenInc = 0.67;
-  let incValue = 0.6;
+  let incValue = -0.6;
 
   let canv;
   let ctx;
