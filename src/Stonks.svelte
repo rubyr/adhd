@@ -9,25 +9,30 @@
 
   let num = 0;
   let hiddenInc = 0.67;
-  let incValue = 0;
+  let incValue = 0.6;
 
   let canv;
   let ctx;
 
-  onMount(() => ctx = canv.getContext("2d"));
+  onMount(() => (ctx = canv.getContext("2d")));
 
   onInterval(() => {
     if (disabled) return;
     num += incValue + hiddenInc;
 
     // shift everything to the left:
-    var imageData = ctx.getImageData(1, 0, ctx.canvas.width-1, ctx.canvas.height);
+    var imageData = ctx.getImageData(
+      1,
+      0,
+      ctx.canvas.width - 1,
+      ctx.canvas.height
+    );
     ctx.putImageData(imageData, 0, 0);
     // now clear the right-most pixels:
-    ctx.clearRect(ctx.canvas.width-1, 0, 1, ctx.canvas.height);
+    ctx.clearRect(ctx.canvas.width - 1, 0, 1, ctx.canvas.height);
 
     ctx.fillStyle = "red";
-    ctx.fillRect(canv.width - 1, (100 - num) / 200 * canv.height, 1, 1);
+    ctx.fillRect(canv.width - 1, ((100 - num) / 200) * canv.height, 1, 1);
 
     if (Math.abs(num) >= 100) {
       fail();
