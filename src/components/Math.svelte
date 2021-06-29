@@ -1,7 +1,7 @@
 <script>
-  import { onInterval } from "../scripts/onInterval";
+  import { onInterval } from "../../scripts/onInterval";
   import { fade } from "svelte/transition";
-  import shuffle from "../scripts/shuffle";
+  import shuffle from "../../scripts/shuffle";
 
   export let fail;
   export let disabled;

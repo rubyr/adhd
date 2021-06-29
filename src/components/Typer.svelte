@@ -1,6 +1,6 @@
 <script>
-  import { onInterval } from "../scripts/onInterval";
-  import words from "../resources/words";
+  import { onInterval } from "../../scripts/onInterval";
+  import words from "../../resources/words";
   import { fade } from "svelte/transition";
 
   export let fail;

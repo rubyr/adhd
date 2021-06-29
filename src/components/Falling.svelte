@@ -1,5 +1,5 @@
 <script>
-  import { onInterval } from "../scripts/onInterval";
+  import { onInterval } from "../../scripts/onInterval";
 
   export let fail;
   export let disabled = false;

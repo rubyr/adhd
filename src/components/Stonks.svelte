@@ -1,5 +1,5 @@
 <script>
-  import { onInterval } from "../scripts/onInterval";
+  import { onInterval } from "../../scripts/onInterval";
   import { fade } from "svelte/transition";
   import { onMount } from "svelte";
 
